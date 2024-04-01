@@ -1,0 +1,23 @@
+[package]
+name = "x86_strings_ops"
+description = "Wrappers for x86 REP MOVS/STOS/CMPS/SCAS string instructions"
+authors = ["Jörn Horstmann <git@jhorstmann.net>"]
+version = "0.1.0"
+edition = "2021"
+categories = ["embedded", "hardware-support"]
+keywords = ["x86", "x86-64"]
+exclude = [".github", ".cargo", "rust-toolchain"]
+
+[dependencies]
+
+[dev-dependencies]
+criterion = "0.5.1"
+rand = "0.8.5"
+
+[[bench]]
+name = "bench_fill"
+harness = false
+
+[[bench]]
+name = "bench_copy"
+harness = false
